@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>暮色档案 · Dusk Archive</title>
+<meta name="description" content="一本剪贴式的私人档案：把每天值得留下的片刻剪下来，贴进册子里。">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0A111D">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<!-- 分享卡片：部署到网上后，把下面两处的地址换成你的真实域名 -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="暮色档案">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="暮色档案 · Dusk Archive">
+<meta property="og:description" content="把每天值得留下的片刻剪下来，贴进册子里。写给自己，也写给路过的人。">
+<meta property="og:image" content="og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="./">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="暮色档案 · Dusk Archive">
+<meta name="twitter:description" content="把每天值得留下的片刻剪下来，贴进册子里。">
+<meta name="twitter:image" content="og-image.jpg">
+
+<link rel="preload" href="vendor/eb-garamond-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="vendor/great-vibes-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="aura" id="aura" aria-hidden="true"></div>
+<div class="progress"><i id="progressBar"></i></div>
+
+<!-- ======================= 入场 ======================= -->
+<div class="gate" id="gate" aria-label="进入档案室">
+  <div class="gate__sheets" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <div class="gate__content">
+    <div class="gate__seal" data-seal>暮</div>
+    <p class="gate__kicker">私 人 档 案 · EST. 1999</p>
+    <h1 class="gate__title" data-split>暮色档案</h1>
+    <p class="gate__script">Dusk Archive</p>
+    <div class="gate__meter"><i data-meter></i></div>
+    <p class="gate__note">正在整理纸张 · 点一下直接进</p>
+  </div>
+</div>
+
+<!-- ======================= 导航 ======================= -->
+<header class="nav" id="nav">
+  <a class="nav__brand" href="#" data-view="feed">
+    <span class="nav__seal">暮</span>
+    <span class="nav__name">暮色档案<em>DUSK ARCHIVE</em></span>
+  </a>
+  <nav class="nav__links" aria-label="主导航">
+    <button data-view="feed" class="is-active">时间流</button>
+    <button data-view="archive">归档</button>
+    <button data-view="about">关于</button>
+    <span class="nav__ink" aria-hidden="true"></span>
+  </nav>
+  <button class="nav__compose" data-action="compose">
+    <span>记一笔</span>
+    <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.4" fill="none"/></svg>
+  </button>
+</header>
+
+<!-- ======================= 转场层 ======================= -->
+<div class="wipe" id="wipe" aria-hidden="true">
+  <div class="wipe__cells"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="wipe__seal">暮</div>
+  <div class="wipe__line"></div>
+</div>
+
+<main id="main">
+
+<!-- ======================= 视图：时间流 ======================= -->
+<section class="view" id="view-feed" data-view-panel="feed">
+
+  <section class="hero">
+    <div class="hero__rings" aria-hidden="true">
+      <svg viewBox="0 0 900 900" fill="none">
+        <circle class="ring" cx="450" cy="450" r="330" stroke="url(#g1)" stroke-width="1"/>
+        <circle class="ring" cx="450" cy="450" r="272" stroke="url(#g1)" stroke-width="1"/>
+        <circle class="ring ring--dash" cx="450" cy="450" r="212" stroke="url(#g1)" stroke-width="1"/>
+        <circle class="ring" cx="450" cy="450" r="404" stroke="url(#g1)" stroke-width=".6" stroke-dasharray="2 9"/>
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#C9A155" stop-opacity=".85"/>
+            <stop offset="52%" stop-color="#C9A155" stop-opacity=".2"/>
+            <stop offset="100%" stop-color="#C9A155" stop-opacity=".62"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+
+    <div class="hero__side" aria-hidden="true">
+      <span class="hero__vertical">把黄昏留下来</span>
+      <span class="hero__rule"></span>
+    </div>
+
+    <div class="hero__copy">
+      <p class="hero__kicker"><i></i>档案 · 一九九九年秋</p>
+      <h1 class="hero__title">
+        <span class="t-outline" data-split>暮色</span>
+        <span class="t-solid" data-split>档案</span>
+      </h1>
+      <p class="hero__script">Dusk Archive</p>
+      <p class="hero__lede">把每天值得留下的片刻剪下来，贴进这本册子里。写给自己，也写给路过的人。</p>
+      <div class="hero__acts">
+        <button class="btn btn--solid" data-action="compose">写一条</button>
+        <button class="btn btn--ghost" data-view="archive">看归档</button>
+      </div>
+    </div>
+
+    <figure class="hero__figure">
+      <div class="hero__frame">
+        <img src="assets/hero-city.jpg" alt="被暖黄灯光泡着的旧城街道，三个人走在斑马线上" width="1900" height="1068">
+        <div class="hero__halftone" aria-hidden="true"></div>
+        <div class="hero__scan" aria-hidden="true"></div>
+      </div>
+      <figcaption class="hero__cap"><span>PLATE 001</span><span>城市是暖黄色的</span></figcaption>
+      <div class="hero__tape" aria-hidden="true"></div>
+    </figure>
+
+    <div class="hero__stats">
+      <div><b data-count="6">0</b><span>篇存稿</span></div>
+      <div><b data-count="26">0</b><span>条回声</span></div>
+      <div><b data-count="1999">0</b><span>起点年份</span></div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track" data-marquee>
+      <span>记录每一个值得收藏的黄昏</span><span class="d">·</span>
+      <span>REGRET NOTHING</span><span class="d">·</span>
+      <span>剪下来 贴上去 别弄丢</span><span class="d">·</span>
+      <span>AN ARCHIVE OF ORDINARY EVENINGS</span><span class="d">·</span>
+      <span>记录每一个值得收藏的黄昏</span><span class="d">·</span>
+      <span>REGRET NOTHING</span><span class="d">·</span>
+      <span>剪下来 贴上去 别弄丢</span><span class="d">·</span>
+      <span>AN ARCHIVE OF ORDINARY EVENINGS</span><span class="d">·</span>
+    </div>
+  </div>
+
+  <div class="board">
+    <div class="feed" id="feed">
+
+      <section class="composer" id="composer">
+        <div class="composer__head">
+          <span class="composer__seal">新</span>
+          <span class="composer__label">往册子里贴一张</span>
+          <span class="composer__no" id="composerNo">No.0413</span>
+        </div>
+        <textarea id="composerBody" rows="3" placeholder="此刻想记下什么？一句话也行，天气也行。"></textarea>
+        <div class="composer__foot">
+          <div class="composer__tags" id="composerTags">
+            <button data-tag="#日常" type="button">#日常</button>
+            <button data-tag="#深夜" type="button">#深夜</button>
+            <button data-tag="#天气" type="button">#天气</button>
+            <button data-tag="#重温" type="button">#重温</button>
+          </div>
+          <div class="composer__right">
+            <span class="composer__count" id="composerCount">0</span>
+            <button class="btn btn--solid btn--sm" id="composerSend" type="button">贴进档案</button>
+          </div>
+        </div>
+      </section>
+
+      <div class="filterbar" id="filterbar" hidden>
+        <span>正在看</span>
+        <b id="filterName"></b>
+        <button id="filterClear" type="button">看全部</button>
+      </div>
+
+      <div class="posts" id="posts"></div>
+
+      <button class="loadmore" id="loadMore" type="button">
+        <span>翻到更早的一页</span>
+        <i aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <aside class="rail">
+      <section class="rail__card rail__card--about">
+        <p class="rail__kicker">关于这本册子</p>
+        <p class="rail__text">一个人，一间房间，一台旧电脑。把看见的、听见的、突然想起来的东西贴进来。不追热点，不赶稿，写不动就空着。</p>
+        <div class="rail__sign">
+          <span class="rail__script">Lan</span>
+          <span class="rail__stamp">蓝</span>
+        </div>
+      </section>
+
+      <section class="rail__card">
+        <p class="rail__kicker">常翻的标签</p>
+        <div class="tags" id="tagCloud"></div>
+      </section>
+
+      <section class="rail__card">
+        <p class="rail__kicker">按月归档</p>
+        <ul class="months" id="monthList"></ul>
+      </section>
+
+      <section class="rail__card rail__card--visit">
+        <p class="rail__kicker">来过的人</p>
+        <p class="rail__big"><b data-count="1284">0</b><span>位</span></p>
+        <p class="rail__tiny">昨天来过 37 位 · 有人在 02:14 停了三分钟</p>
+      </section>
+
+      <p class="rail__foot">暮色档案 · 手工装订 · 共 6 张纸</p>
+    </aside>
+  </div>
+</section>
+
+<!-- ======================= 视图：归档 ======================= -->
+<section class="view" id="view-archive" data-view-panel="archive" hidden>
+  <div class="archive__head">
+    <p class="kicker">ARCHIVE / 归档</p>
+    <h2 class="h2">全部纸张<em>按时间摊开</em></h2>
+    <p class="archive__lede">六张纸，六段被留下来的光。点开任意一张，回到那天的句子里。</p>
+  </div>
+  <div class="archive__grid" id="archiveGrid"></div>
+  <div class="archive__foot">
+    <span>继续往前翻，册子还有空页</span>
+    <button class="btn btn--ghost" data-view="feed">回到时间流</button>
+  </div>
+</section>
+
+<!-- ======================= 视图：关于 ======================= -->
+<section class="view" id="view-about" data-view-panel="about" hidden>
+  <div class="about">
+    <aside class="about__side">
+      <p class="kicker">COLOPHON</p>
+      <div class="about__portrait" aria-hidden="true">
+        <div class="about__monogram">暮</div>
+        <div class="about__ring"></div>
+      </div>
+      <h3 class="about__name">蓝</h3>
+      <p class="about__role">写字的人 / 高二</p>
+      <p class="about__meta">住在一座会下雨的城市<br>喜欢深夜和白噪音</p>
+    </aside>
+    <div class="about__body">
+      <h2 class="h2 h2--lg">这本册子的<em>来历</em></h2>
+      <div class="about__prose">
+        <p class="lead">初二那年我在旧书摊买到一本硬壳剪贴簿，店主说原本是别人的，后来没人来取。我用了三块钱带走它，一直空着，直到去年才贴进第一张纸。</p>
+        <p>我试过很多种记录方式。朋友圈太吵，备忘录太散，最后发现纸和胶水最让人安心：贴错了可以撕下来，撕坏了就留着那道口子。</p>
+        <p>这个站就是那本册子的电子版。左边是今天，右边是我。你可以在任何一条下面说话，我会看，只是回得慢。</p>
+      </div>
+      <div class="about__timeline">
+        <div class="tl"><span>1999</span><p>册子上印的年份，和我的出生年无关，只是觉得好看。</p></div>
+        <div class="tl"><span>2025</span><p>贴进第一张纸，是一张下雨的车站照片。</p></div>
+        <div class="tl"><span>今天</span><p>共 6 篇，26 条回声。慢慢加。</p></div>
+      </div>
+      <div class="about__acts">
+        <button class="btn btn--solid" data-view="feed">回到时间流</button>
+        <button class="btn btn--ghost" data-action="compose">写一条给册子</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__row">
+    <span class="foot__seal">暮</span>
+    <p>暮色档案 · 手工装订 · 所有纸张都归你</p>
+    <p class="foot__script">Dusk Archive</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/SplitText.min.js"></script>
+<script src="vendor/CustomEase.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
